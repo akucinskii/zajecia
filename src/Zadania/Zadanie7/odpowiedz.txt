@@ -1,0 +1,9 @@
+Różnice między nimi są następujące:
+
+Files a FileChannel: Files dostarcza abstrakcje na operacje plikowe na wyższym poziomie, takie jak kopiowanie, usuwanie itp., podczas gdy FileChannel pozwala na operacje wejścia/wyjścia niskiego poziomu, takie jak czytanie i zapisywanie bezpośrednio do kanału, co może być bardziej wydajne dla niektórych operacji.
+
+Path a Paths: Path jest interfejsem reprezentującym konkretną ścieżkę w systemie plików, podczas gdy Paths jest klasą narzędziową zawierającą metody do tworzenia obiektów Path.
+
+FileSystem a FileSystems: FileSystem reprezentuje konkretny system plików, podczas gdy FileSystems jest klasą narzędziową zawierającą metody pomocnicze do zarządzania systemami plików, takie jak pobieranie domyślnego systemu plików.
+
+File a Files: File jest starszą klasą w Javie do reprezentowania plików i katalogów w systemie plików, podczas gdy Files dostarcza bardziej zaawansowane operacje plikowe w postaci statycznych metod pomocniczych.
