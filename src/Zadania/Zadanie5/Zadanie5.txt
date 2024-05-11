@@ -1,0 +1,4 @@
+findFirst() zwraca pierwsze dopasowanie znalezione w strumieniu, co może być różne dla różnych uruchomień strumienia, 
+szczególnie gdy używamy równoczesnego filtrowania wątków (parallelStream()). Natomiast findAny() zwraca 
+dowolne dopasowanie, co również może być różne dla różnych uruchomień, ale nie musi być to pierwsze znalezione dopasowanie, 
+ponieważ operacje równoczesne mogą prowadzić do różnych kolejności przetwarzania elementów w strumieniu.

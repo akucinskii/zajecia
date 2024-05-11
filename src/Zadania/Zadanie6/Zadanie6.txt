@@ -1,0 +1,22 @@
+Stream() używa jednego wątku do przetwarzania danych, 
+podczas gdy parallelStream() korzysta z wielu wątków, co może przyspieszyć operacje w przypadku dużych zbiorów danych.
+
+Decyzja o tym kiedy używamy którego użyć powinna zależeć od tego czy wykonywane operacje mogą być bezpiecznie wykonywane na wielu wątkach jednocześnie.
+Do tego często może się okazać że wykonanie sekwencyjne zwykłego stream() będzie szybsze, z uwagi na to że koszt rozdzielenia pomiędzy wątki, oraz późniejszego złączenia wyników w jedność będzie wyższy od ewentualnych zysków z wykonywania operacji równocześnie.
+
+Na podstawie przykładowego kodu, gdy w generateNumbers podamy wartość mniejszą od 10, praktycznie zawsze Stream było szybsze, gdy wartość jest większa parallelStream wygrywa
+
+Na podstawie przykładowego kodu, stream() jest szybsze w dodawaniu natomiast fibonacci wygrywa parallelStream().
+
+Wyniki: 
+
+gdy: 
+Dodawanie();
+Fibonacci();
+
+Stream czas: 1307250 ns
+ParallelStream czas: 2393416 ns
+Porownanie dodawania: 0.5461858699031008 // mniejsze niz 1 czyli parallelStream() wolniejsze, stream() szybsze
+Stream czas: 8906167 ns
+Parallel czas: 2260500 ns
+Porownanie Fibonacci: 3.939910196859102 // większe niz 1 czyli parallelStream() szybsze, stream() wolniejsze
