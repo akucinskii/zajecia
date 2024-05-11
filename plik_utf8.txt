@@ -1,0 +1,3 @@
+Pierwsza linia, ĘŚąćź */
+Druga linia ĘŚąćź
+Trzecia linia ĘŚąćź

@@ -1,0 +1,1 @@
+Występuje to w momencie gdy następuje za duzo zdarzen na raz, ponad limit mozliwosci systemu plików. Wtedy system plików nie jest w stanie obsłużyć wszystkich zdarzeń w kolejce i zaczyna je odrzucać. Wtedy zdarzenia są gubione i nie są obsługiwane prawidlowo co mozemy wychwycic wlasnie dzieki temu błędu.
